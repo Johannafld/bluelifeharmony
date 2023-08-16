@@ -1,0 +1,84 @@
+      /* Styles pour le bouton "Créer un article" */
+      .create-article-link {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: var(--color-primary);
+        text-decoration: none;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: var(--color-gray);
+    }
+
+    .create-article-link:visited {
+      color: var(--color-gray-light);
+  }
+
+    /* Styles pour les cartes d'articles */
+    .article-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+      width: 80%;
+      margin: 0 auto; /* Center the grid */
+  }
+
+  .article-card {
+      background-color: var(--color-white);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+  }
+
+  .article-card p {
+      font-size: 18px;
+      margin-top: 10px;
+  }
+
+       .delete-button {
+        background-color: #e74c3c;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+
+    /* Styles for the article form */
+.article-form {
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Styles for input and textarea */
+.article-form input[type="text"],
+.article-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* Style for the create button */
+.create-button {
+  background-color: var(--color-primary);
+  color: var(--color-gray-light);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: var(--color-secondary);
+}

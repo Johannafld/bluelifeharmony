@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  /* Color Palette */
+  --color-primary: #4d72a2;
+  --color-secondary: #a6d0f0;
+  --color-accent: #ff8464;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-yellow: #FFDE59;
+  --color-gray-light: #f9f9f9;
+  --color-gray-dark: #333333;
+  --color-gray: #555;
+
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--color-gray-light);
+}
+
+main {
+  min-height: 80vh;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: initial;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+/* Dashboard Header Styles */
+.dashboard-header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 64px;
+  height: 64px;
+}
+
+.logo p {
+  font-size: 22px;
+  font-weight: bold;
+  margin-left: 10px;
+  color: var(--color-gray-light);
+}
+
+.logo p span {
+  color: var(--color-yellow);
+}
+
+.logo p span:last-child {
+  color: var(--color-accent);
+}
+
+.dashboard-header .menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboard-header .menu p {
+  font-size: 16px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.dashboard-header .menu a {
+  color: var(--color-gray-light);
+}
+
+.dashboard-header .navbar {
+  margin-right:10px;
+}
+
+.logout-button {
+  font-size: 16px;
+  text-decoration: none;
+  color: var(--color-white);
+  background-color: var(--color-accent);
+  padding: 10px 20px;
+  border-radius: 4px;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  text-align: center;
+  padding: 30px;
+}
+
+.footer-text {
+  font-size: 14px;
+}
+
+/* Mobile devices */
+@media screen and (max-width: 767px) {
+  .dashboard-header {
+      padding: 5px;
+  }
+
+  .logo img {
+      margin-bottom: 10px;
+  }
+
+  .logo p {
+      font-size: 18px;
+      margin-left: 0;
+  }
+
+  .menu {
+      flex-direction: column;
+      align-items: center;
+
+  }
+
+  .menu p {
+      margin-bottom: 5px;
+  }
+}
