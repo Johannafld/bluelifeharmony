@@ -5,6 +5,7 @@
         <p>Blue <span>Life</span> <span>Harmony</span></p>
     </div>
     </a>
+    <a href="?frontpage">Visiter le site</a>
     <div class="menu">
       <nav class="navbar">
       <a href="articles.php">Mes Articles</a>

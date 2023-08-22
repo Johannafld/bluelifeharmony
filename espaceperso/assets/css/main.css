@@ -33,10 +33,11 @@ main {
 
 a {
   text-decoration: none;
+  color: var(--color-gray-light);
 }
 
 a:visited {
-  color: initial;
+  color: var(--color-gray-light);
 }
 
 a:hover {

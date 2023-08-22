@@ -17,6 +17,11 @@ if (!$lien) {
 // VARIABLES
 $user = $_SESSION["user"];
 
+// Visit front page
+if (isset($_GET['frontpage'])) {
+    header("location: ../index.php");
+}
+
 // Logout
 if (isset($_GET['logout'])) {
 	session_destroy();

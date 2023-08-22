@@ -31,7 +31,10 @@ if (!isset($_SESSION["user"])) {
             <input type="text" id="title" name="title" required><br>
 
             <label for="content">Contenu de l'article:</label><br>
-            <textarea id="content" name="content" rows="4" required></textarea><br>
+            <textarea id="content" name="content" rows="6" required></textarea><br>
+
+            <label for="background_color">Couleur de fond:</label><br>
+            <input type="color" id="background_color" name="background_color"><br>
 
             <button type="submit" class="create-button">Créer l'article</button>
         </form>
@@ -39,9 +42,10 @@ if (!isset($_SESSION["user"])) {
     if (!empty($_POST)) {
         $title = mysqli_real_escape_string($lien, $_POST['title']);
         $content = mysqli_real_escape_string($lien, $_POST['content']);
-        $creator_id = $_SESSION["user"]["id"]; // Assuming "id" is the field in the user array
+        $background_color = mysqli_real_escape_string($lien, $_POST['background_color']);
+        $creator_id = $_SESSION["user"]["id"];
 
-        $query = "INSERT INTO articles (title, content, creator_id) VALUES ('$title', '$content', '$creator_id')";
+        $query = "INSERT INTO articles (title, content, background_color, creator_id) VALUES ('$title', '$content', '$background_color', '$creator_id')";
         $result = mysqli_query($lien, $query);
 
         if ($result) {
