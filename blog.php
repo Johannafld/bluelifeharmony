@@ -10,7 +10,8 @@ $backgroundImages = [
   'https://images.unsplash.com/photo-1526739178209-77cd6c6bcf4f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2792&q=80',
   'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
   'https://scontent.fcdg4-1.fna.fbcdn.net/v/t31.18172-8/26172134_1489413351167153_6182747604602238646_o.jpg?_nc_cat=107&ccb=1-7&_nc_sid=4dc865&_nc_ohc=5jHnJJx96ZkAX_aUJtk&_nc_ht=scontent.fcdg4-1.fna&oh=00_AfCdM5EBdwPpS9SJ3vUUnLQOhglBh6mL7s56z_3YEDX18Q&oe=64FADEB8',
-  'https://www.cfa-espace-concours.fr/wp-content/uploads/2023/03/journee-mondiale-sensibilisation-autisme-scaled.jpg'
+  'https://www.cfa-espace-concours.fr/wp-content/uploads/2023/03/journee-mondiale-sensibilisation-autisme-scaled.jpg',
+  'https://images.unsplash.com/photo-1475924156734-496f6cac6ec1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2940&q=80',
 ];
 ?>
 
@@ -38,7 +39,7 @@ $backgroundImages = [
    
       <div class="slider-container">
         <div class="left-slide">
-        <?php foreach ($articles as $article): ?>
+          <?php foreach ($articles as $index => $article): ?>
             <div style="background-color: <?php echo $article['background_color']; ?>">
               <h1><?php echo $article['title']; ?></h1>
               <p><?php echo $article['content']; ?></p>
@@ -46,9 +47,9 @@ $backgroundImages = [
           <?php endforeach; ?>
         </div>
         <div class="right-slide">
-        <?php foreach ($articles as $article): ?>
-                  <div style="background-image: url('<?php echo $backgroundImages[array_rand($backgroundImages)]; ?>')"></div>
-        <?php endforeach; ?>
+          <?php foreach ($articles as $index => $article): ?>
+            <div style="background-image: url('<?php echo $backgroundImages[$index % count($backgroundImages)]; ?>')"></div>
+          <?php endforeach; ?>
         </div>
         <div class="action-buttons">
           <button class="down-button">
@@ -68,7 +69,7 @@ $backgroundImages = [
 </main>
 
 <?php 
-      include('./partials/footer.php');
+  include('./partials/footer.php');
 ?>
 
 <script src="assets/js/index.js"></script>
