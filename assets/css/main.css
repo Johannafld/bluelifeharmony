@@ -206,3 +206,14 @@ header {
     font-size: 14px;
   }
 }
+
+et en css dans main.css tu fais 
+
+```
+#audioPlayer {
+  position: fixed;  
+  bottom: 10px;
+  right: 10px;
+  z-index: 1000;
+}
+```

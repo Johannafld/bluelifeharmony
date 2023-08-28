@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" href="assets/css/header.css"
+</head>
 <header class="dashboard-header">
     <a href="index.php">
     <div class="logo">
@@ -5,9 +8,10 @@
         <p>Blue <span>Life</span> <span>Harmony</span></p>
     </div>
     </a>
-    <a href="?frontpage">Visiter le site</a>
+    
     <div class="menu">
       <nav class="navbar">
+      <a href="?frontpage">Visiter le site</a>
       <a href="articles.php">Mes Articles</a>
       <a href="profile.php">Mon Profil</a>
     </nav>

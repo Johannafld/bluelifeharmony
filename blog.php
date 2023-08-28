@@ -30,6 +30,15 @@ $backgroundImages = [
   <?php 
     include('./partials/header.php');
   ?>
+  <style>
+    #audioPlayer {
+      display: none; 
+    }
+  </style>
+    <audio controls autoplay loop id="audioPlayer">
+      <source src="assets/musique/gaara.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
 
 <main>
 

@@ -14,6 +14,15 @@
     <script src="assets/js/index.js"></script>
   </head>
   <body>
+  <style>
+    #audioPlayer {
+      display: none; 
+    }
+  </style>
+    <audio controls autoplay loop id="audioPlayer">
+      <source src="assets/musique/date.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   <?php 
     include('./partials/header.php');
   ?>
